@@ -7,26 +7,34 @@ Public Class ServicesController
         Return Await ServiceManager.GetServicesAsync
     End Function
 
-    Public Async Function [Get](serviceName As String) As Task(Of ServiceModel)
+    <HttpGet>
+    Public Async Function Details(serviceName As String) As Task(Of ServiceModel)
         Return Await ServiceManager.GetServiceAsync(serviceName)
     End Function
 
-
-    Public Sub Post(<FromBody> value As ServiceModel)
-        Dim a = value
-    End Sub
-
-    Public Sub Put(serviceName As String, <FromBody> value As String)
-
-    End Sub
-
-    Public Sub Delete(serviceName As String)
-
-    End Sub
+    <HttpGet>
+    Public Async Function Extended(serviceName As String) As Task(Of ExtendedServiceModel)
+        Return Await ServiceManager.GetExtendedServiceAsync(serviceName)
+    End Function
 
     <HttpPost>
-    Public Function Start(serviceName As String) As Boolean
-        Return True
+    Public Function Start(<FromBody> service As ServiceModel) As String
+        Return ServiceManager.ControlService(service.ServiceName, ControlType.StartService).ToString
+    End Function
+
+    <HttpPost>
+    Public Function [Stop](<FromBody> service As ServiceModel) As String
+        Return ServiceManager.ControlService(service.ServiceName, ControlType.StopService).ToString
+    End Function
+
+    <HttpPost>
+    Public Function Pause(<FromBody> service As ServiceModel) As String
+        Return ServiceManager.ControlService(service.ServiceName, ControlType.PauseService).ToString
+    End Function
+
+    <HttpPost>
+    Public Function [Resume](<FromBody> service As ServiceModel) As String
+        Return ServiceManager.ControlService(service.ServiceName, ControlType.ResumeService).ToString
     End Function
 
 End Class

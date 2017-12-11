@@ -97,10 +97,12 @@
   <ItemGroup>
     <Compile Include="api\ServicesController.vb" />
     <Compile Include="Models\ControlModel.vb" />
+    <Compile Include="Models\ControlType.vb" />
+    <Compile Include="Models\ExtendedServiceModel.vb" />
     <Compile Include="Models\PerformanceModel.vb" />
     <Compile Include="Models\ServiceModel.vb" />
     <Compile Include="Models\WmiReturn.vb" />
-    <Compile Include="ModMain.vb" />
+    <Compile Include="Utils\ModMain.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -117,9 +119,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ServiceManager.vb" />
+    <Compile Include="Utils\ServiceManager.vb" />
     <Compile Include="Startup.vb" />
-    <Compile Include="Wmi.vb" />
+    <Compile Include="Utils\Wmi.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">

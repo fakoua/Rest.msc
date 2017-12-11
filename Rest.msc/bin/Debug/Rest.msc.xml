@@ -99,24 +99,20 @@ Rest.msc
  <returns></returns>
  <remarks></remarks>
 </member>
-<member name="M:Rest.msc.ServiceManager.GetServiceByNameAsync(System.String,System.String)">
+<member name="M:Rest.msc.ModMain.PushLog(System.Exception)">
  <summary>
- Get service by name and machine for update list view
+ Logging.
  </summary>
- <param name="machine"></param>
- <param name="serviceName"></param>
- <returns></returns>
- <remarks></remarks>
- 
+ <param name="ex"></param>
 </member>
-<member name="M:Rest.msc.ServiceManager.GetServiceByName(System.String,System.String,System.Int32)">
+<member name="M:Rest.msc.ServiceManager.GetServiceName(System.String)">
  <summary>
- Return the servie
+ Retreive Service name from WMI Path
+ Example: \\Computer\root\cimv2:Win32_Service.Name="RpcSs"
  </summary>
- <param name="machine"></param>
- <param name="serviceName"></param>
- <param name="waitTime">Wait Time used in sleep function in order to allow some time to refresh the status in case of PENDING</param>
- <remarks></remarks>
+ <param name="wmiPath">WMI Path</param>
+ <returns>String, service name</returns>
+ <remarks>I think there is another way to get the name, need to consider change this approach</remarks>
 </member>
 <member name="M:Rest.msc.Wmi.GetServiceName(System.String)">
  <summary>
