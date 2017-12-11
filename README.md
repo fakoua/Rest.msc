@@ -38,14 +38,14 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 - **Payload:** none
 - **Return value:** List Of ServiceModel
 - **Results (JSON):**
-```
+```json
 [
 	{
 		"ServiceName": "AGSService",
 		"DisplayName": "Adobe Genuine Software Integrity Service",
 		"DisplayNameDepend": "Adobe Genuine Software Integrity Service",
 		"Description": "Adobe Genuine Software Integrity Service",
-		"PathName": "\"C:\\Program Files (x86)\\Common Files\\Adobe\\AdobeGCClient\\AGSService.exe\"",
+		"PathName": "\"C:\\Program Files...\\AGSService.exe\"",
 		"AcceptPause": false,
 		"AcceptStop": true,
 		"DesktopInteract": false,
@@ -77,12 +77,12 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 - **Return value:** ServiceModel
 - **Results (JSON):**
 
-```
+```json
 {
 	"ServiceName": "RpcSs",
 	"DisplayName": "Remote Procedure Call (RPC)",
 	"DisplayNameDepend": "Remote Procedure Call (RPC)",
-	"Description": "The RPCSS service is the Service Control Manager for COM and DCOM servers. It performs object activations requests, object exporter resolutions and distributed garbage collection for COM and DCOM servers. If this service is stopped or disabled, programs using COM or DCOM will not function properly. It is strongly recommended that you have the RPCSS service running.",
+	"Description": "The RPCSS service is the ... service running.",
 	"PathName": "\"C:\\Windows\\system32\\svchost.exe -k rpcss\"",
 	"AcceptPause": false,
 	"AcceptStop": false,
@@ -112,13 +112,13 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 - **Return value:** ExtendedServiceModel
 - **Results (JSON):**
 
-```
+```json
 {
 	"Service": {
 		"ServiceName": "RpcSs",
 		"DisplayName": "Remote Procedure Call (RPC)",
 		"DisplayNameDepend": "Remote Procedure Call (RPC)",
-		"Description": "The RPCSS service is the Service Control Manager for COM and DCOM servers. It performs object activations requests, object exporter resolutions and distributed garbage collection for COM and DCOM servers. If this service is stopped or disabled, programs using COM or DCOM will not function properly. It is strongly recommended that you have the RPCSS service running.",
+		"Description": "The RPCSS service is the Service ... the RPCSS service running.",
 		"PathName": "\"C:\\Windows\\system32\\svchost.exe -k rpcss\"",
 		"AcceptPause": false,
 		"AcceptStop": false,
@@ -136,14 +136,14 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 		"StartMode": "Auto",
 		"StartModeView": "Automatic",
 		"StartNameView": "NetworkService",
-		"DescriptionView": "The RPCSS service is the Service Control Manager f ..."
+		"DescriptionView": "The RPCSS service is the  ..."
 	},
 	"DependsOn": [
 		{
 			"ServiceName": "RpcEptMapper",
 			"DisplayName": "RPC Endpoint Mapper",
 			"DisplayNameDepend": "RPC Endpoint Mapper",
-			"Description": "Resolves RPC interfaces identifiers to transport endpoints. If this service is stopped or disabled, programs using Remote Procedure Call (RPC) services will not function properly.",
+			"Description": "Resolves RPC interfaces ... properly.",
 			"PathName": "\"C:\\Windows\\system32\\svchost.exe -k RPCSS\"",
 			"AcceptPause": false,
 			"AcceptStop": false,
@@ -167,7 +167,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 			"ServiceName": "DcomLaunch",
 			"DisplayName": "DCOM Server Process Launcher",
 			"DisplayNameDepend": "DCOM Server Process Launcher",
-			"Description": "The DCOMLAUNCH service launches COM and DCOM servers in response to object activation requests. If this service is stopped or disabled, programs using COM or DCOM will not function properly. It is strongly recommended that you have the DCOMLAUNCH service running.",
+			"Description": "The DCOMLAUNCH service ... running.",
 			"PathName": "\"C:\\Windows\\system32\\svchost.exe -k DcomLaunch\"",
 			"AcceptPause": false,
 			"AcceptStop": false,
@@ -197,7 +197,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 > **POST** http://myserver:9000/api/services/start
 
 - **Payload:** service name
-```
+```json
 {
 	"serviceName": "myservice"
 }
@@ -211,7 +211,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 > **POST** http://myserver:9000/api/services/stop
 
 - **Payload:** service name
-```
+```json
 {
 	"serviceName": "myservice"
 }
@@ -225,7 +225,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 > **POST** http://myserver:9000/api/services/pause
 
 - **Payload:** service name
-```
+```json
 {
 	"serviceName": "myservice"
 }
@@ -239,7 +239,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 > **POST** http://myserver:9000/api/services/resume
 
 - **Payload:** service name
-```
+```json
 {
 	"serviceName": "myservice"
 }
@@ -253,7 +253,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 
 ### WMI Action Result
 
-```
+```vbnet
     Success
     NotSupported
     AccessDenied
@@ -284,7 +284,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
  ```
  
  ### Service Model
- ```
+ ```vbnet
  Public Class ServiceModel
     Property ServiceName As String
     Property DisplayName As String
