@@ -25,7 +25,7 @@ Currently **Rest.msc** does not support authentication.
 
 ### Data Format
 
-**Rest.msc** REST API prodides XML and JSON as data format. The default data format is XML. 
+**Rest.msc** REST API provides XML and JSON as data format. The default data format is XML. 
 To get a JSON result, please add “Accept application/json” to the request header. 
 If you want to create a resource with JSON data format, please add “Content-Type: application/json“.
 
