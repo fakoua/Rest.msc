@@ -289,7 +289,7 @@ If you want to create a resource with JSON data format, please add “Content-Ty
     Property ServiceName As String
     Property DisplayName As String
     Property Description As String
-    Property PathName() As String
+    Property PathName As String
     Property AcceptPause As Boolean
     Property AcceptStop As Boolean
     Property DesktopInteract As Boolean
@@ -304,8 +304,8 @@ If you want to create a resource with JSON data format, please add “Content-Ty
     ReadOnly Property StateView As String
     Property SystemName As String
     Property StartMode As String
-    Public ReadOnly Property StartModeView() As String
-    Public ReadOnly Property StartNameView() As String
+    Public ReadOnly Property StartModeView As String
+    Public ReadOnly Property StartNameView As String
     Public ReadOnly Property DescriptionView As String
 End Class
 
