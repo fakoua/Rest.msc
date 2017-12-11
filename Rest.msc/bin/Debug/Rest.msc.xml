@@ -1,0 +1,131 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Rest.msc
+</name>
+</assembly>
+<members>
+<member name="T:Rest.msc.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Rest.msc.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Rest.msc.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Rest.msc.ControlModel.LastError">
+ <summary>
+ Indicate the handled error if WMIValue value is HandledError
+ </summary>
+ <value>String of ex.ToString()</value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Rest.msc.PerformanceModel.Memory">
+ <summary>
+ Private Working Set
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Rest.msc.PerformanceModel.PeakMemory">
+ <summary>
+ Peak Memory
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:Rest.msc.ServiceModel._PathName">
+ <summary>
+ Added as param function in order to fix the error while path contains space
+ </summary>
+</member>
+<member name="P:Rest.msc.ServiceModel.ServiceType">
+ <summary>
+ Type of the process, OwnProcess ...
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Rest.msc.ServiceModel.Status">
+ <summary>
+ Values: OK ..
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Rest.msc.ServiceModel.StartName">
+ <summary>
+ Log On As
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Rest.msc.ServiceModel.State">
+ <summary>
+ Values: Running, Stopped ...
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Rest.msc.ServiceModel.StateView">
+ <summary>
+ Values: Running, Stopped ...
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks>Return empty string is status is Stopped for list view</remarks>
+</member>
+<member name="P:Rest.msc.ServiceModel.StartMode">
+ <summary>
+ Values: Manual, Auto, Disabled
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Rest.msc.ServiceManager.GetServiceByNameAsync(System.String,System.String)">
+ <summary>
+ Get service by name and machine for update list view
+ </summary>
+ <param name="machine"></param>
+ <param name="serviceName"></param>
+ <returns></returns>
+ <remarks></remarks>
+ 
+</member>
+<member name="M:Rest.msc.ServiceManager.GetServiceByName(System.String,System.String,System.Int32)">
+ <summary>
+ Return the servie
+ </summary>
+ <param name="machine"></param>
+ <param name="serviceName"></param>
+ <param name="waitTime">Wait Time used in sleep function in order to allow some time to refresh the status in case of PENDING</param>
+ <remarks></remarks>
+</member>
+<member name="M:Rest.msc.Wmi.GetServiceName(System.String)">
+ <summary>
+ Retreive Service name from WMI Path
+ Example: \\Computer\root\cimv2:Win32_Service.Name="RpcSs"
+ </summary>
+ <param name="wmiPath">WMI Path</param>
+ <returns>String, service name</returns>
+ <remarks>I think there is another way to get the name, need to consider change this approach</remarks>
+</member>
+</members>
+</doc>
