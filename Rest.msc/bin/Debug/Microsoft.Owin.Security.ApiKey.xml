@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Owin.Security.ApiKey</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationMiddleware">
+            <summary>
+            OWIN authentication middleware to enable authentication of requests using an API key in the
+            request's header.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationMiddleware.#ctor(Microsoft.Owin.OwinMiddleware,Owin.IAppBuilder,Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions)">
+            <summary>
+            API key authentication middleware component which is added to an OWIN pipeline. This
+            constructor is not called by application code directly, instead it is added by calling
+            the IAppBuilder UseApiKeyAuthentication extension method.
+            </summary>
+            <param name="next"></param>
+            <param name="app"></param>
+            <param name="options"></param>
+        </member>
+        <member name="M:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationMiddleware.CreateHandler">
+            <summary>
+            Called by the AuthenticationMiddleware base class to create a per-request handler.
+            </summary>
+            <returns>A new instance of the request handler</returns>
+        </member>
+        <member name="T:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions">
+            <summary>
+            Options which control the behaviour of the authentication middleware.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions.Provider">
+            <summary>
+            The object provided by the application to process events raised by the API key
+            authentication middleware. The application must create an instance of
+            <c>ApiKeyAuthenticationProvider</c> and assign delegates to the mandatory events.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions.#ctor">
+            <summary>
+            Creates an instance of API key authentication options with default values.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions.Header">
+            <summary>
+            The header that shall contain the authentication data. Defaults to "Authorization".
+            <para>
+            An example header using the <see cref="T:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions"/> defaults would be:
+            </para>
+            <para>Authorization: ApiKey 4fb4e33c83e5d026e8745102b72f10590f48e94af107db15074c799589a4753d</para>
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions.HeaderKey">
+            <summary>
+            The key of the key/value pair that represents the authentication type and its data.
+            Defaults to "ApiKey".
+            <para>
+            An example header using the <see cref="T:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions"/> defaults would be:
+            </para>
+            <para>Authorization: ApiKey 4fb4e33c83e5d026e8745102b72f10590f48e94af107db15074c799589a4753d</para>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationProvider">
+            <summary>
+            Default implementation of ApiKeyAuthenticationProvider used by the API key authentication
+            middleware to communicate with the web application while processing requests.
+            ApiKeyAuthenticationProvider provides some default behaviour, may be used as a virtual base
+            class, and offers delegate properties which may be used to handle individual calls without
+            declaring a new class type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationProvider.OnGenerateClaims">
+            <summary>
+            Called to generate a set of claims to represent the user to whom the provided API key belongs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationProvider.OnValidateIdentity">
+            <summary>
+            Called to validate that the API key supplied with the request is considered by your
+            application to be a valid API key. The application MUST implement this call.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationProvider.GenerateClaims(Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyGenerateClaimsContext)">
+            <summary>
+            Implements the interface method by invoking the related delegate method.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationProvider.ValidateIdentity(Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyValidateIdentityContext)">
+            <summary>
+            Implements the interface method by invoking the related delegate method.
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyContextBase">
+            <summary>
+            Contains data about the API key provided with the request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyContextBase.ApiKey">
+            <summary>
+            The API key supplied with the request.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyContextBase.HasError">
+            <summary>
+            Should be set to true if any errors have been generated when building the context.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyGenerateClaimsContext">
+            <summary>
+            Contains data about the API key provided with the request in order to construct an identity
+            for the requester.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyValidateIdentityContext">
+            <summary>
+            Contains data about the API key provided with the request. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyValidateIdentityContext.IsValidated">
+            <summary>
+            True if application code has called any of the Validate methods on this context. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyValidateIdentityContext.StatusCode">
+            <summary>
+            The HTTP status code to use when responding to the client. This is only used if the
+            context is not validated, i.e. the user is not authenticated.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Security.ApiKey.Contexts.ApiKeyValidateIdentityContext.Validate">
+            <summary>
+            Marks this context as validated by the application. IsValidated becomes true and HasError
+            becomes false as a result of calling.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Owin.Security.ApiKey.IAppBuilderExtensions">
+            <summary>
+            Extension methods to add API key authentication capabilities to an OWIN pipeline.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Owin.Security.ApiKey.IAppBuilderExtensions.UseApiKeyAuthentication(Owin.IAppBuilder,Microsoft.Owin.Security.ApiKey.ApiKeyAuthenticationOptions)">
+            <summary>
+            Configures an Owin application to use API key authentication; the API key should be
+            provided in the authorization header on every request, e.g. <c>'Authorization: ApiKey 123'</c>.
+            </summary>
+            <param name="app">The web application builder</param>
+            <param name="options">Options which control the behaviour of the authentication middleware</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
