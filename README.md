@@ -31,6 +31,16 @@ If you want to create a resource with JSON data format, please add “Content-Ty
 
 ### Commands
 
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**Service Details**](ServicesApi.md#servicesdetails) | **GET** /api/Services/Details/{serviceName} | 
+[**Service Extended**](ServicesApi.md#servicesextended) | **GET** /api/Services/Extended/{serviceName} | 
+[**Services List**](ServicesApi.md#servicesget) | **GET** /api/Services/Get | 
+[**Pause**](ServicesApi.md#servicespause) | **POST** /api/Services/Pause | 
+[**Resume**](ServicesApi.md#servicesresume) | **POST** /api/Services/Resume | 
+[**Start**](ServicesApi.md#servicesstart) | **POST** /api/Services/Start | 
+[**Stop**](ServicesApi.md#servicesstop) | **POST** /api/Services/Stop | 
+
 #### Listing Services
 
 > **GET** http://myserver:9000/api/services
