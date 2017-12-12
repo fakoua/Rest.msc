@@ -105,22 +105,4 @@
             Return Description.Substring(0, 50) & " ..."
         End Get
     End Property
-
-    Dim _dependsOn As List(Of ServiceModel)
-    Public Function DependsOnAsync(services As List(Of ServiceModel)) As List(Of ServiceModel)
-        '    Dim objWmi As New Wmi(identity)
-        '    _dependsOn = Await objWmi.GetDependsOnAsync(Me, services)
-        'End If
-        'Return _dependsOn
-    End Function
-
-    Dim _dependOnThisService As List(Of ServiceModel)
-    Public Function DependOnThisServiceAsync(services As List(Of ServiceModel)) As List(Of ServiceModel)
-        'If _dependOnThisService Is Nothing Then
-        '    Dim objWmi As New Wmi(identity)
-        '    _dependOnThisService = Await objWmi.GetDependOnThisServiceAsync(Me, services)
-        'End If
-        'Return _dependOnThisService
-    End Function
-
 End Class

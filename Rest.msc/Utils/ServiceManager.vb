@@ -194,7 +194,11 @@ Friend Class ServiceManager
         Dim dependsOn = Await Task.Run(Function()
                                            Return GetDependsOn(serviceName, allServices)
                                        End Function)
+        Dim dependOnThisService = Await Task.Run(Function()
+                                                     Return GetDependOnThisService(serviceName, allServices)
+                                                 End Function)
         exService.DependsOn = dependsOn
+        exService.DependOnThisService = dependOnThisService
         Return exService
     End Function
 
@@ -211,6 +215,31 @@ Friend Class ServiceManager
                 Dim queryCollection As ManagementObjectCollection = mos.Get
                 For Each mo As ManagementObject In queryCollection
                     Dim depServiceName = GetServiceName(mo.Item("Antecedent").ToString)
+                    Dim dependsOnService = services.Where(Function(p) p.ServiceName.ToUpperInvariant = depServiceName.ToUpperInvariant).FirstOrDefault
+                    If dependsOnService IsNot Nothing Then
+                        rtnVal.Add(dependsOnService)
+                    End If
+                Next
+            End Using
+            Return rtnVal
+        Catch ex As Exception
+            Return Nothing
+        End Try
+    End Function
+
+    Private Shared Function GetDependOnThisService(serviceName As String, services As List(Of ServiceModel)) As List(Of ServiceModel)
+        Try
+            Dim queryPath = String.Format("SELECT * FROM Win32_DependentService WHERE Antecedent='Win32_Service.Name=\'{0}\''", serviceName)
+            Dim query As New ObjectQuery(queryPath)
+            Dim manScope As New ManagementScope(String.Format(CultureInfo.InvariantCulture, "\\{0}\root\cimv2", "."))
+            manScope.Options.EnablePrivileges = True
+
+            manScope.Connect()
+            Dim rtnVal As New List(Of ServiceModel)
+            Using mos As ManagementObjectSearcher = New ManagementObjectSearcher(manScope, query)
+                Dim queryCollection As ManagementObjectCollection = mos.Get
+                For Each mo As ManagementObject In queryCollection
+                    Dim depServiceName = GetServiceName(mo.Item("Dependent").ToString)
                     Dim dependsOnService = services.Where(Function(p) p.ServiceName.ToUpperInvariant = depServiceName.ToUpperInvariant).FirstOrDefault
                     If dependsOnService IsNot Nothing Then
                         rtnVal.Add(dependsOnService)

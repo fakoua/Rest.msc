@@ -43,10 +43,15 @@ C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\System.Net.Http.Formatting.xml
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\System.Web.Http.xml
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\System.Web.Http.Owin.xml
-C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.vbprojResolveAssemblyReference.cache
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.Resources.resources
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.vbproj.GenerateResource.Cache
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.vbproj.CoreCompileInputs.cache
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.exe
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.xml
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.pdb
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Swashbuckle.Core.dll
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\WebActivatorEx.dll
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.vbprojResolveAssemblyReference.cache

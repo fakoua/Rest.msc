@@ -1,0 +1,356 @@
+﻿{
+  "swagger": "2.0",
+  "info": {
+    "version": "v1",
+    "title": "Rest.msc API"
+  },
+  "host": "localhost:9000",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/api/Services/Get": {
+      "get": {
+        "tags": [
+          "Services"
+        ],
+        "operationId": "Services_Get",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/ServiceModel"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Services/Details/{serviceName}": {
+      "get": {
+        "tags": [
+          "Services"
+        ],
+        "operationId": "Services_Details",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "serviceName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ServiceModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/Services/Extended/{serviceName}": {
+      "get": {
+        "tags": [
+          "Services"
+        ],
+        "operationId": "Services_Extended",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "serviceName",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/ExtendedServiceModel"
+            }
+          }
+        }
+      }
+    },
+    "/api/Services/Start": {
+      "post": {
+        "tags": [
+          "Services"
+        ],
+        "operationId": "Services_Start",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ServiceModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Services/Stop": {
+      "post": {
+        "tags": [
+          "Services"
+        ],
+        "operationId": "Services_Stop",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ServiceModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Services/Pause": {
+      "post": {
+        "tags": [
+          "Services"
+        ],
+        "operationId": "Services_Pause",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ServiceModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "/api/Services/Resume": {
+      "post": {
+        "tags": [
+          "Services"
+        ],
+        "operationId": "Services_Resume",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml",
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "service",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ServiceModel"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "ServiceModel": {
+      "type": "object",
+      "properties": {
+        "ServiceName": {
+          "type": "string"
+        },
+        "DisplayName": {
+          "type": "string"
+        },
+        "DisplayNameDepend": {
+          "type": "string",
+          "readOnly": true
+        },
+        "Description": {
+          "type": "string"
+        },
+        "PathName": {
+          "type": "string"
+        },
+        "AcceptPause": {
+          "type": "boolean"
+        },
+        "AcceptStop": {
+          "type": "boolean"
+        },
+        "DesktopInteract": {
+          "type": "boolean"
+        },
+        "ErrorControl": {
+          "type": "string"
+        },
+        "IsSystem": {
+          "type": "boolean"
+        },
+        "ProcessId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "ServiceType": {
+          "type": "string"
+        },
+        "Started": {
+          "type": "boolean"
+        },
+        "Status": {
+          "type": "string"
+        },
+        "StartName": {
+          "type": "string"
+        },
+        "State": {
+          "type": "string"
+        },
+        "StateView": {
+          "type": "string",
+          "readOnly": true
+        },
+        "SystemName": {
+          "type": "string"
+        },
+        "StartMode": {
+          "type": "string"
+        },
+        "StartModeView": {
+          "type": "string",
+          "readOnly": true
+        },
+        "StartNameView": {
+          "type": "string",
+          "readOnly": true
+        },
+        "DescriptionView": {
+          "type": "string",
+          "readOnly": true
+        }
+      }
+    },
+    "ExtendedServiceModel": {
+      "type": "object",
+      "properties": {
+        "Service": {
+          "$ref": "#/definitions/ServiceModel"
+        },
+        "DependsOn": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceModel"
+          }
+        },
+        "DependOnThisService": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceModel"
+          }
+        }
+      }
+    }
+  }
+}
