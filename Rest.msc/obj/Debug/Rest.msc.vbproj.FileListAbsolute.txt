@@ -60,3 +60,4 @@ C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Microsoft.Owin.Security.ApiKey.xml
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Topshelf.dll
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Topshelf.xml
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.vbprojResolveAssemblyReference.cache
