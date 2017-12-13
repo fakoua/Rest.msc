@@ -15,7 +15,7 @@ Restful API management for Windows Services. Access and control windows services
 - Go the Rest.msc folder and run the command **Rest.msc.exe install**
 - Go to the service manager (services.msc) find the service **Rest.msc API** and Start the service
 - Now you can access the API using any Restful Client
-- *for complete documentation, keep reading this file!*
+- *for complete documentation, please see [API-Documentation.md](API-Documentation.md)*
 
 ### Prerequisites
 
