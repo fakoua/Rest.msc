@@ -1,1 +1,7 @@
-language: vbnet
+language: csharp
+solution: Rest.msc.sln
+install:
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore Rest.msc.sln
+mono:
+  - latest
