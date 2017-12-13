@@ -1,1 +1,1 @@
-Rest.msc.exe service
+Rest.msc.exe

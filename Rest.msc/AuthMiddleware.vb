@@ -8,6 +8,12 @@ Public Class AuthMiddleware
     End Sub
 
     Public Overrides Async Function Invoke(context As IOwinContext) As Task
+        If context.Request.Path.Value.StartsWith("/swagger/", StringComparison.InvariantCultureIgnoreCase) Then
+            'No authentication
+            Await [Next].Invoke(context)
+            Exit Function
+        End If
+
         If String.IsNullOrEmpty(ApiKey) Then
             'No authentication
             Await [Next].Invoke(context)
@@ -26,7 +32,11 @@ Public Class AuthMiddleware
     Private Shared Function GetApiKey(context As IOwinContext) As String
         Try
             Dim rtnVal = context.Request.Headers.Item("Authorization")
-            If String.IsNullOrEmpty(rtnVal) Then Return ""
+            If String.IsNullOrEmpty(rtnVal) Then
+                Dim apiKey = context.Request.Query.Item("api_key")
+                If String.IsNullOrEmpty(apiKey) Then Return ""
+                Return apiKey
+            End If
             Dim arAuth = rtnVal.Split(" ".ToCharArray, StringSplitOptions.RemoveEmptyEntries)
             Select Case arAuth(0).ToUpperInvariant
                 Case "BASIC"

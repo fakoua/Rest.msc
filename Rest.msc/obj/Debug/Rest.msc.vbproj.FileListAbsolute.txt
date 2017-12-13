@@ -54,10 +54,12 @@ C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\System.Web.Http.WebHost.dll
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\WebActivatorEx.dll
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\System.Web.Http.WebHost.xml
-C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Microsoft.Owin.Security.ApiKey.dll
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Microsoft.Owin.Security.xml
-C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Microsoft.Owin.Security.ApiKey.xml
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Topshelf.dll
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\Topshelf.xml
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\NLog.config
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\NLog.dll
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\NLog.xml
 C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\obj\Debug\Rest.msc.vbprojResolveAssemblyReference.cache
+C:\Users\sameh\Documents\Visual Studio 2017\Projects\Rest.msc\Rest.msc\Rest.msc\bin\Debug\SqueezeMe.dll

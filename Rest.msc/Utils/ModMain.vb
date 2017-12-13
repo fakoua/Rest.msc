@@ -1,8 +1,16 @@
-﻿Module ModMain
+﻿Imports System.Security.Principal
+Imports NLog
 
+Module ModMain
+    Friend tracer As Logger = LogManager.GetLogger("RestMsc")
     Friend PortNumber As Integer = 9000
     Friend ApiKey As String = ""
     Friend ServiceServer As IDisposable = Nothing 'For service
+
+
+    Friend Function IsElevated() As Boolean
+        Return New WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator)
+    End Function
 
     ''' <summary>
     ''' Logging.

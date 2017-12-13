@@ -1,0 +1,79 @@
+2017-12-13 11:42:51.1517 INFO Start
+2017-12-13 11:44:00.0019 INFO Start. Is Interactive: True
+2017-12-13 11:44:18.6278 INFO Start. Is Interactive: False
+2017-12-13 12:01:11.7224 INFO Start. Is Interactive: True
+2017-12-13 12:02:32.4293 INFO Start. Is Interactive: True
+2017-12-13 12:09:14.4562 INFO Start. Is Interactive: True
+2017-12-13 12:09:14.4872 INFO Running As Topshelf
+2017-12-13 12:09:21.0546 INFO Start. Is Interactive: True
+2017-12-13 12:09:21.0866 INFO Running As Topshelf
+2017-12-13 12:09:33.2093 INFO Start. Is Interactive: True
+2017-12-13 12:09:33.2333 INFO Running As Console
+2017-12-13 12:10:00.9670 INFO Start. Is Interactive: True
+2017-12-13 12:10:00.9900 INFO Running As Console
+2017-12-13 12:10:16.1985 INFO Start. Is Interactive: True
+2017-12-13 12:10:16.2215 INFO Running As Topshelf
+2017-12-13 12:10:23.7038 INFO Start. Is Interactive: True
+2017-12-13 12:10:23.7257 INFO Running As Topshelf
+2017-12-13 12:10:39.2684 INFO Start. Is Interactive: False
+2017-12-13 12:10:39.2914 INFO Running As Topshelf
+2017-12-13 12:10:56.1319 INFO Start. Is Interactive: True
+2017-12-13 12:10:56.1549 INFO Running As Topshelf
+2017-12-13 12:11:44.9359 INFO Start. Is Interactive: True
+2017-12-13 12:11:44.9579 INFO Running As Topshelf
+2017-12-13 12:11:57.5612 INFO Start. Is Interactive: True
+2017-12-13 12:11:57.5842 INFO Running As Console
+2017-12-13 12:12:14.0112 INFO Start. Is Interactive: True
+2017-12-13 12:12:14.0342 INFO Running As Topshelf
+2017-12-13 12:16:33.3889 ERROR Run the application As Administrator
+2017-12-13 12:16:52.2799 ERROR Run the application As Administrator
+2017-12-13 12:17:00.6341 INFO Start. Is Interactive: True
+2017-12-13 12:17:00.6570 INFO Running As Topshelf
+2017-12-13 12:17:05.2274 INFO Start. Is Interactive: True
+2017-12-13 12:17:05.2504 INFO Running As Console
+2017-12-13 12:18:02.7337 INFO Start. Is Interactive: False
+2017-12-13 12:18:02.7577 INFO Running As Topshelf
+2017-12-13 15:44:40.3951 INFO Start. Is Interactive: True
+2017-12-13 15:44:40.4221 INFO Running As Console
+2017-12-13 15:45:49.3403 INFO Start. Is Interactive: True
+2017-12-13 15:45:49.3793 INFO Running As Console
+2017-12-13 15:50:32.8665 INFO Start. Is Interactive: True
+2017-12-13 15:50:32.8905 INFO Running As Console
+2017-12-13 15:51:29.0099 INFO Start. Is Interactive: True
+2017-12-13 15:51:29.0339 INFO Running As Console
+2017-12-13 15:52:13.6324 INFO Start. Is Interactive: True
+2017-12-13 15:52:13.6564 INFO Running As Console
+2017-12-13 15:52:39.5183 INFO Start. Is Interactive: True
+2017-12-13 15:52:39.5433 INFO Running As Console
+2017-12-13 15:57:12.6705 INFO Start. Is Interactive: True
+2017-12-13 15:57:12.6955 INFO Running As Console
+2017-12-13 16:01:04.5825 INFO Start. Is Interactive: True
+2017-12-13 16:01:04.6065 INFO Running As Console
+2017-12-13 16:02:16.9426 INFO Start. Is Interactive: True
+2017-12-13 16:02:16.9666 INFO Running As Console
+2017-12-13 16:04:35.1481 INFO Start. Is Interactive: True
+2017-12-13 16:04:35.1711 INFO Running As Console
+2017-12-13 18:59:22.4019 INFO Start. Is Interactive: True
+2017-12-13 18:59:22.4249 INFO Running As Console
+2017-12-13 19:01:33.3875 INFO Start. Is Interactive: True
+2017-12-13 19:01:33.4170 INFO Running As Console
+2017-12-13 19:02:09.9043 INFO Start. Is Interactive: True
+2017-12-13 19:02:09.9288 INFO Running As Console
+2017-12-13 19:02:39.0699 INFO Start. Is Interactive: True
+2017-12-13 19:02:39.0959 INFO Running As Console
+2017-12-13 19:03:48.2470 INFO Start. Is Interactive: True
+2017-12-13 19:03:48.2765 INFO Running As Console
+2017-12-13 19:06:12.1241 INFO Start. Is Interactive: True
+2017-12-13 19:06:12.1531 INFO Running As Console
+2017-12-13 20:26:14.3648 INFO Start. Is Interactive: True
+2017-12-13 20:26:14.4028 INFO Running As Console
+2017-12-13 20:30:32.1473 INFO Start. Is Interactive: True
+2017-12-13 20:30:32.1728 INFO Running As Console
+2017-12-13 20:34:37.8362 INFO Start. Is Interactive: True
+2017-12-13 20:34:37.8612 INFO Running As Console
+2017-12-13 20:50:26.8877 INFO Start. Is Interactive: True
+2017-12-13 20:50:26.9147 INFO Running As Console
+2017-12-13 20:53:52.7564 INFO Start. Is Interactive: True
+2017-12-13 20:53:52.7904 INFO Running As Console
+2017-12-13 20:55:26.5819 INFO Start. Is Interactive: True
+2017-12-13 20:55:26.6259 INFO Running As Console
