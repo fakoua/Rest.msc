@@ -3,7 +3,7 @@ Restful API management for Windows Services. Access and control windows services
 
 ## Getting Started
 
-Download binary file (coming soon)
+Download the latest Release binary from: [Latest Release](/releases/latest)
 
 ### Prerequisites
 
@@ -21,7 +21,7 @@ This project is licensed under the MIT License.
 
 ### Authentication
 
-Currently **Rest.msc** does not support authentication.
+**Rest.msc** supports Basic, Bearer and Query String API Key.
 
 ### Data Format
 
