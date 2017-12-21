@@ -21,6 +21,18 @@ Restful API management for Windows Services. Access and control windows services
 
 .Net Framework 4.7, Visual Studio 2015 or higher with Visual Basic.Net
 
+## Dockerfile
+
+```
+FROM microsoft/dotnet-framework:4.7
+ARG source
+WORKDIR /app
+COPY ${source:-obj/Docker/publish} .
+ENV APIKEY 111
+ENV DockerEnv true
+ENTRYPOINT ["C:\\app\\Rest.msc.exe"]
+```
+
 ## Authors
 
 * **Sameh Fakoua** - [fakoua](https://github.com/fakoua)
