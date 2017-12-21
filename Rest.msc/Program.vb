@@ -6,16 +6,33 @@ Imports Topshelf.Hosts
 Module Program
     Sub Main()
 
+        ConsoleLog("Starting Rest.msc ...")
+
+        Console.Out.WriteLine("hello")
+
         If Not IsElevated() Then
             tracer.Error("Run the application As Administrator")
             Console.WriteLine("Error: Run the application As Administrator")
+
             Environment.Exit(0)
+        End If
+
+        Dim dockerEnv = CBool(GetEnvVar("DockerEnv", "False", True))
+
+        If dockerEnv Then
+
+            Console.WriteLine("Starting on docker container.")
         End If
 
         Dim args = Environment.GetCommandLineArgs.Count
         tracer.Info($"Start. Is Interactive: {Environment.UserInteractive}")
         PortNumber = CInt(GetAppSettingValue("PortNumber", "9000", True))
+
         ApiKey = GetAppSettingValue("ApiKey", "", False)
+        If Not String.IsNullOrEmpty(GetEnvVar("APIKEY", "", False)) Then
+            ApiKey = GetEnvVar("APIKEY", "", False)
+        End If
+
         Dim baseAddress = $"http://*:{PortNumber}"
         Dim AsTopshelf = False
 
@@ -32,6 +49,9 @@ Module Program
             End If
         End If
 
+        If dockerEnv Then
+            AsTopshelf = False
+        End If
 
         tracer.Info($"Running As {If(AsTopshelf, "Topshelf", "Console")}")
 
@@ -77,4 +97,13 @@ Module Program
             Return defaultValue
         End Try
     End Function
+
+    Private Function GetEnvVar(keyName As String, defaultValue As String, defaultIfEmpty As Boolean) As String
+        Dim rtnVal = Environment.GetEnvironmentVariable(keyName)
+        If String.IsNullOrEmpty(rtnVal) Then
+            Return If(defaultIfEmpty, defaultValue, "")
+        End If
+        Return rtnVal
+    End Function
+
 End Module

@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  rest.msc:
+    image: rest.msc
+    build:
+      context: .\Rest.msc
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true

@@ -8,7 +8,7 @@ Public Class AuthMiddleware
     End Sub
 
     Public Overrides Async Function Invoke(context As IOwinContext) As Task
-        If context.Request.Path.Value.StartsWith("/swagger/", StringComparison.InvariantCultureIgnoreCase) Then
+        If context.Request.Path.Value.StartsWith("/swagger", StringComparison.InvariantCultureIgnoreCase) Then
             'No authentication
             Await [Next].Invoke(context)
             Exit Function

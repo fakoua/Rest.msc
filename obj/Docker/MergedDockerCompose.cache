@@ -1,0 +1,15 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  rest.msc:
+    build:
+      context: C:\Users\sameh\Source\Repos\Rest.msc\Rest.msc
+      dockerfile: Dockerfile
+    image: rest.msc
+    ports:
+    - 9000:9000/tcp
+    stdin_open: true
+    tty: true
+version: '3.0'

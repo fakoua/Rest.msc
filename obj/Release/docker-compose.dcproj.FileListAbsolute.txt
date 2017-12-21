@@ -1,0 +1,1 @@
+C:\Users\sameh\Source\Repos\Rest.msc\obj\Release\docker-compose.dcproj.CoreCompileInputs.cache
