@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/sx1sg65qx7p42w28?svg=true)](https://ci.appveyor.com/project/fakoua/rest-msc)
+
 # Rest.msc
 Restful API management for Windows Services. Access and control windows services using http commands.
 
